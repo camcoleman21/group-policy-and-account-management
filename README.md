@@ -38,22 +38,22 @@ To enable RDP access across multiple domain-joined systems, start by navigating 
 <img width="2880" height="1702" alt="image" src="https://github.com/user-attachments/assets/9eb36edb-2e81-4f3e-94f0-7061498c1669" />
 </p>
 <p>
-To configure account lockout settings, start by opening the Group Policy Management Console. Edit the default domain policy (or create a new GPO) and navigate to the Account Lockout Policy Settings (Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy). There will be three primary settings to configure: Lockout Duration, Lockout Threshold, Allow Administrator Account Lockout, and Reset Account Lockout After. Once settings are configured, apply the GPO to an OU. The policy will update automatically or can be forced via PowerShell using gpupdate /force. To reset user's password, search for the user within ADUC, right-click their name, and select reset password. This will give you the option to enter a new password and/or check the 'unlock the user's account' box.
+To configure account lockout settings, start by opening the Group Policy Management Console. Edit the default domain policy (or create a new GPO) and navigate to the Account Lockout Policy Settings (Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy). There will be three primary settings to configure: Lockout Duration, Lockout Threshold, Allow Administrator Account Lockout, and Reset Account Lockout After. Once settings are configured, apply the GPO to an OU. The policy will update automatically or can be forced via PowerShell using gpupdate /force. To reset a user's password, search for the user within ADUC, right-click their name, and select reset password. This will give you the option to enter a new password and/or check the 'unlock the user's account' box.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="2880" height="1702" alt="image" src="https://github.com/user-attachments/assets/b4cf7567-d7fb-4f4f-a778-d2e04032bb72" />
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+To disable an account within Active Directory Users and Computers, it's as simple as searching the user's name, right-clicking on their name, and selecting 'Disable Account'. The same procedure is done when enabling an account as well.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="2880" height="1698" alt="image" src="https://github.com/user-attachments/assets/8b07bc1c-b0f7-4511-8790-f4d4f94cf230" />
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+To observe machine logs, open up Event Viewer within either DC-1 or Client-1 VM's. Navigate from Window logs to security and observe all of the logs monitored within the domain.
 </p>
 <br />
