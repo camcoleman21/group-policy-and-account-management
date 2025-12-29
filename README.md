@@ -11,6 +11,7 @@ This overview outlines the application of group policy and account management wi
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Active Directory Domain Services
+- Group Policy Management
 
 <h2>Operating Systems Used </h2>
 
