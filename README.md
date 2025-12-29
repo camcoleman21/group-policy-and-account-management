@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
+<img width="2500" height="415" alt="image" src="https://github.com/user-attachments/assets/aa23f9b6-dfaa-4da7-94fb-15e92d3e2461" />
 </p>
 
 <h1>Enforcing Group Policy and Account Management within Active Directory (Azure VMs)</h1>
