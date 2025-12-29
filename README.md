@@ -2,34 +2,37 @@
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
 
-<h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+<h1>Enforcing Group Policy and Account Management within Active Directory (Azure VMs)</h1>
+This overview outlines the application of group policy and account management within Active Directory.<br />
 
-
-<h2>Video Demonstration</h2>
-
-- ### [YouTube: How to Deploy on-premises Active Directory within Azure Compute](https://www.youtube.com)
 
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Active Directory Domain Services
-- PowerShell
 
 <h2>Operating Systems Used </h2>
 
-- Windows Server 2022
+- Windows Server 2025
 - Windows 10 (21H2)
 
-<h2>High-Level Deployment and Configuration Steps</h2>
+<h2>High-Level Use Cases and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Enabling Remote Desktop Across Many Domain-Joined Systems
+- Dealing with Account Lockouts
+- Enabling and Disabling Accounts
+- Observing Machine Logs
 
-<h2>Deployment and Configuration Steps</h2>
+<h2>Use Cases and Configuration Steps</h2>
+
+<p>
+<img width="2636" height="1402" alt="image" src="https://github.com/user-attachments/assets/a41fb08d-23ec-455b-8423-abfd2ff511a7" />
+</p>
+<p>
+To enable RDP access across multiple domain-joined systems, start by navigating to Active Directory Users and Computers, creating a Global Security Group, and adding all users who should have RDP access. Open Group Policy Management (Run > gpmc.msc), right-click the OU that contains computer accounts and select Create a GPO in this domain and link it here. Edit the GPO by going from Computer Config, Policies, Admin Templates, Windows Components, Remote Desktop Services, Session Host, and Connections. Enable users to connect remotely using RDS. Go back to Preferences, Control Panel Settings, and local users and groups to add a new group and the members from the Global Security Group previously made to avoid breaking existing access. Allow log on through Remote Desktop Services for the new group by going from Policies, Windows Settings, Security Settings, Local Policies, and User Rights Assignment. Verify they are not denied in the deny log on through Remote Desktop Services. Finally, enable the Windows Firewall Rule for RDP with a predefined 'Remote Desktop- User Mode (TCP-In) rule.   
+</p>
+<br />
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
